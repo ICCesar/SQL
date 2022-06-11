@@ -26,7 +26,7 @@ INSERT INTO store VALUES (15, "Web Cam", "input", 19.99, 5);
 
 --Data ordered by price
 SELECT * FROM store
-ORDER BY price desc;
+ORDER BY price DESC;
 
 --Average price of hardware
 SELECT AVG(price) "Average hardware item price"
