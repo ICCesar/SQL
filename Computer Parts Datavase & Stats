@@ -25,7 +25,7 @@ ORDER BY price desc;
 --Average price of hardware
 SELECT AVG(price) "Average hardware item price"
 FROM store
-where section = 'hardware';
+WHERE section = 'hardware';
 
 --Top 5 important items
 SELECT item, price, necessity
