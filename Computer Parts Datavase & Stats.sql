@@ -1,10 +1,11 @@
 --Data Creation
-CREATE TABLE store 
-  (id INTEGER PRIMARY KEY, 
-  item TEXT, 
-  section TEXT, 
-  price INTEGER, 
-  necessity INTEGER);
+CREATE TABLE store(
+  id        INTEGER PRIMARY KEY, 
+  item      TEXT, 
+  section   TEXT, 
+  price     INTEGER, 
+  necessity INTEGER
+);
 
 --Data Input
 INSERT INTO store VALUES (01, "CPU", "hardware", 699.99, 1);
