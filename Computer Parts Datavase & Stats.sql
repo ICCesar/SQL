@@ -35,5 +35,5 @@ WHERE section = 'hardware';
 --Top 5 important items
 SELECT item, price, necessity
 FROM store
-order by necessity asc
-limit 5;
+ORDER BY necessity ASC
+LIMIT 5;
