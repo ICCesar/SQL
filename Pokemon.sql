@@ -814,8 +814,18 @@ INSERT INTO pokemon(Number,Name,Type_1,Type_2,Total,HP,Attack,Defense,Sp_Atk,Sp_
 INSERT INTO pokemon(Number,Name,Type_1,Type_2,Total,HP,Attack,Defense,Sp_Atk,Sp_Def,Speed,Generation,Legendary) VALUES (720,'HoopaHoopa Unbound','Psychic','Dark',680,80,160,60,170,130,80,6,'True');
 INSERT INTO pokemon(Number,Name,Type_1,Type_2,Total,HP,Attack,Defense,Sp_Atk,Sp_Def,Speed,Generation,Legendary) VALUES (721,'Volcanion','Fire','Water',600,80,110,120,130,90,70,6,'True');
 
+SELECT * FROM pokemon 
+WHERE Type_1 = 'Fighting'
+OR Type_2 = 'Fighting';
+
 SELECT MAX(Attack) FROM pokemon WHERE Type_1 = 'Fighting';
 SELECT AVG(Attack) FROM pokemon WHERE Type_1 = 'Fighting';
 SELECT MIN(Attack) FROM pokemon WHERE Type_1 = 'Fighting';
 
+SELECT * FROM pokemon 
+WHERE Type_1 = 'Psychic'
+OR Type_2 = 'Psychic';
+
 SELECT MAX(Sp_Atk) FROM pokemon WHERE Type_1 = 'Psychic';
+SELECT AVG(Sp_Atk) FROM pokemon WHERE Type_1 = 'Psychic';
+SELECT MIN(Sp_Atk) FROM pokemon WHERE Type_1 = 'Psychic';
