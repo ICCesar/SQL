@@ -49,7 +49,7 @@ FROM nomnom
 ORDER BY review DESC
 LIMIT 10;
 
---
+--Restaurants re-ranked
 SELECT name,
  CASE
   WHEN review > 4.5 THEN 'Extraordinary'
