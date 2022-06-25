@@ -1,5 +1,5 @@
 /*
-
+Lyft Trip Data
 */
 
 --Calling the three tables
@@ -43,3 +43,32 @@ JOIN cars
   ON trips.car_id = cars.id;
   
 --Combinding new data   
+SELECT *
+FROM riders
+UNION
+SELECT *
+FROM riders2;
+
+--What is average cost for a trip
+SELECT AVG(cost)
+FROM trips;
+
+--Joining riders and riders two in order to find irregular users.
+SELECT *
+FROM riders
+WHERE total_trips < 500
+UNION
+SELECT *
+FROM riders2
+WHERE total_trips < 500;
+
+--Number of active cars
+SELECT COUNT(*)
+FROM cars
+WHERE status = 'active';
+
+--Top two cars with most trips.
+SELECT *
+FROM cars
+ORDER BY trips_completed DESC
+LIMIT 2;
