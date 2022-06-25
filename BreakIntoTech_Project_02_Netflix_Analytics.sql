@@ -1,5 +1,5 @@
 /*
-
+In this SQL code, I'm querying a database that's holding Nexflix data to answer questions about the data. 
 */
 
 --1. How many movie titles are there in the database? (movies only, not tv shows)
