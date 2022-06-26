@@ -13,9 +13,7 @@ SELECT * FROM cars;
 SELECT riders.first,
    riders.last,
    cars.model
-FROM riders, cars;
-
---Not very helpful
+FROM riders, cars; --Not very helpful
 
 --Using a LEFT JOIN on trips and riders for trip log
 SELECT *
