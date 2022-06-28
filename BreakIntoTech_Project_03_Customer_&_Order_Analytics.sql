@@ -88,7 +88,7 @@ HAVING COUNT(orderID)>2;
 
 /*
 148 Elm St, New York City, NY 10001	      3
-515 Lincoln St, New York City, NY 10001	  3
+515 Lincoln St, New York City, NY 10001	    3
 916 Pine St, New York City, NY 10001    	3
 961 Jefferson St, New York City, NY 10001	4
 */
