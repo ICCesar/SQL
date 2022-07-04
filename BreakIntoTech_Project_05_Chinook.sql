@@ -64,14 +64,51 @@ JOIN chinook.Invoices Inv
 ON Inv.CustomerId = cust.CustomerId;
 
 -- 08. How many Invoices were there in 2009?
+SELECT 
+COUNT(*)
+FROM chinook.Invoices
+WHERE InvoiceDate BETWEEN '2009-01-01' AND '2009-12-31'; --83
 
 -- 09. What are the total sales for 2009?
+SELECT 
+SUM(Total)
+FROM chinook.Invoices
+WHERE InvoiceDate BETWEEN '2009-01-01' AND '2009-12-31'; --449.46
 
 -- 10. Write a query that includes the purchased track name with each invoice line item.
+SELECT 
+t.Name, 
+i.InvoiceLineId
+FROM chinook.Invoice_items i
+JOIN chinook.Tracks t 
+ON i.TrackId = t.TrackId;
 
 -- 11. Write a query that includes the purchased track name AND artist name with each invoice line item.
+SELECT 
+t.Name, 
+t.Composer, 
+i.InvoiceLineId
+FROM chinook.Invoice_items i 
+JOIN chinook.Tracks t 
+ON i.TrackId = t.TrackId;
 
 -- 12. Provide a query that shows all the Tracks, and include the Album name, Media type, and Genre.
+SELECT 
+t.Name 
+AS 'Tracks', 
+a.Title 
+AS 'Album name', 
+m.Name 
+AS 'Media type', 
+g.Name 
+AS 'Genre'
+FROM chinook.tracks t
+JOIN chinook.Albums a 
+ON a.AlbumId = t.AlbumId
+JOIN chinook.Media_Types m 
+ON m.MediaTypeId = t.MediaTypeId
+JOIN chinook.Genres g 
+ON g.GenreId = t.GenreId;
 
 -- 13. Show the total sales made by each sales agent.
 
