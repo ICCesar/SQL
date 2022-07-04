@@ -23,3 +23,27 @@ tempo decimal(6,3) NOT NULL,
 duration_ms integer NOT NULL,
 time_signature integer NOT NULL 
 )
+
+--
+SELECT
+artist_name,
+track_name,
+popularity,
+danceability,
+energy,
+loudness,
+speechiness,
+liveness,
+duration_ms
+FROM BIT_DB.spotifydata
+GROUP BY artist_name, track_name
+
+--
+SELECT 
+track_name, 
+artist_name, 
+popularity,
+danceability
+FROM BIT_DB.spotifydata
+WHERE popularity > 85
+ORDER BY danceability DESC
