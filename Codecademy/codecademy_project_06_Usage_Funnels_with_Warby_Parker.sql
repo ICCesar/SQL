@@ -66,10 +66,10 @@ LIMIT 5;
 /*
 We’d like to create a new table with the following layout:
 
-user_id	    is_home_try_on   number_of_pairs    is_purchase
-4e8118dc	   True	            3	                 False
-291f1cca	   True	            5	                 False
-75122300	   False	           NULL	              False
+user_id     is_home_try_on     number_of_pairs     is_purchase
+4e8118dc    True               3                   False
+291f1cca	   True               5                   False
+75122300	   False              NULL                False
 
 Each row will represent a single user from the browse table:
 
